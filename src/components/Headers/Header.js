@@ -24,7 +24,7 @@ class Header extends React.Component {
   render() {
     return (
       <>
-        <div className="header bg-gradient-info pb-8 pt-5 pt-md-8">
+        <div className="header bg-gradient-info-green pb-8 pt-5 pt-md-8">
           <Container fluid>
             <div className="header-body">
               {/* Card stats */}
@@ -38,10 +38,10 @@ class Header extends React.Component {
                             tag="h5"
                             className="text-uppercase text-muted mb-0"
                           >
-                            Traffic
+                            Всего обращений
                           </CardTitle>
                           <span className="h2 font-weight-bold mb-0">
-                            350,897
+                            35
                           </span>
                         </div>
                         <Col className="col-auto">
@@ -54,7 +54,7 @@ class Header extends React.Component {
                         <span className="text-success mr-2">
                           <i className="fa fa-arrow-up" /> 3.48%
                         </span>{" "}
-                        <span className="text-nowrap">Since last month</span>
+                        <span className="text-nowrap">Кол-во доков для заверения</span>
                       </p>
                     </CardBody>
                   </Card>
@@ -68,10 +68,10 @@ class Header extends React.Component {
                             tag="h5"
                             className="text-uppercase text-muted mb-0"
                           >
-                            New users
+                            Первичных обращений
                           </CardTitle>
                           <span className="h2 font-weight-bold mb-0">
-                            2,356
+                            7
                           </span>
                         </div>
                         <Col className="col-auto">
@@ -98,7 +98,7 @@ class Header extends React.Component {
                             tag="h5"
                             className="text-uppercase text-muted mb-0"
                           >
-                            Sales
+                            Повторные обращения
                           </CardTitle>
                           <span className="h2 font-weight-bold mb-0">924</span>
                         </div>
@@ -126,10 +126,10 @@ class Header extends React.Component {
                             tag="h5"
                             className="text-uppercase text-muted mb-0"
                           >
-                            Performance
+                            Срочные обращения
                           </CardTitle>
                           <span className="h2 font-weight-bold mb-0">
-                            49,65%
+                            4
                           </span>
                         </div>
                         <Col className="col-auto">
