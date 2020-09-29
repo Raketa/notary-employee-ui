@@ -18,7 +18,7 @@
 import React from "react";
 
 // reactstrap components
-import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
+import { Button, Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 
 class Header extends React.Component {
   render() {
@@ -51,10 +51,14 @@ class Header extends React.Component {
                         </Col>
                       </Row>
                       <p className="mt-3 mb-0 text-muted text-sm">
-                        <span className="text-success mr-2">
-                          <i className="fa fa-arrow-up" /> 3.48%
-                        </span>{" "}
-                        <span className="text-nowrap">Повторных обращений</span>
+                        <Button
+                                                color="seconadary"
+                                                href="#pablo"
+                                                onClick={e => e.preventDefault()}
+                                                size="sm"
+                                                >
+                                                  Развернуть
+                                                </Button>
                       </p>
                     </CardBody>
                   </Card>
@@ -81,10 +85,14 @@ class Header extends React.Component {
                         </Col>
                       </Row>
                       <p className="mt-3 mb-0 text-muted text-sm">
-                        <span className="text-danger mr-2">
-                          <i className="fas fa-arrow-down" /> 3.48%
-                        </span>{" "}
-                        <span className="text-nowrap">Since last week</span>
+                      <Button
+                        color="seconadary"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                        size="sm"
+                        >
+                          Развернуть
+                        </Button>
                       </p>
                     </CardBody>
                   </Card>
@@ -109,10 +117,14 @@ class Header extends React.Component {
                         </Col>
                       </Row>
                       <p className="mt-3 mb-0 text-muted text-sm">
-                        <span className="text-warning mr-2">
-                          <i className="fas fa-arrow-down" /> 1.10%
-                        </span>{" "}
-                        <span className="text-nowrap">Since yesterday</span>
+                        <Button
+                                                color="seconadary"
+                                                href="#pablo"
+                                                onClick={e => e.preventDefault()}
+                                                size="sm"
+                                                >
+                                                  Развернуть
+                                                </Button>
                       </p>
                     </CardBody>
                   </Card>
@@ -139,10 +151,14 @@ class Header extends React.Component {
                         </Col>
                       </Row>
                       <p className="mt-3 mb-0 text-muted text-sm">
-                        <span className="text-success mr-2">
-                          <i className="fas fa-arrow-up" /> 12%
-                        </span>{" "}
-                        <span className="text-nowrap">Since last month</span>
+                        <Button
+                                                color="seconadary"
+                                                href="#pablo"
+                                                onClick={e => e.preventDefault()}
+                                                size="sm"
+                                                >
+                                                  Развернуть
+                                                </Button>
                       </p>
                     </CardBody>
                   </Card>

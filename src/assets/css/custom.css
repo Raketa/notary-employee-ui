@@ -14,3 +14,8 @@
     overflow-y: scroll;
     max-height: 600px;
 }
+
+.text-sm
+{
+    text-align: right !important;
+}

@@ -122,19 +122,19 @@ class Icons extends React.Component {
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Action
+                                                                    Отправить смс
                                                                 </DropdownItem>
                                                                 <DropdownItem
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Another action
+                                                                    Отправить email
                                                                 </DropdownItem>
                                                                 <DropdownItem
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Something else here
+                                                                    Показать номер
                                                                 </DropdownItem>
                                                             </DropdownMenu>
                                                         </UncontrolledDropdown>
@@ -173,19 +173,19 @@ class Icons extends React.Component {
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Action
+                                                                    Отправить смс
                                                                 </DropdownItem>
                                                                 <DropdownItem
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Another action
+                                                                    Отправить email
                                                                 </DropdownItem>
                                                                 <DropdownItem
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Something else here
+                                                                    Показать номер
                                                                 </DropdownItem>
                                                             </DropdownMenu>
                                                         </UncontrolledDropdown>
@@ -224,19 +224,19 @@ class Icons extends React.Component {
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Action
+                                                                    Отправить смс
                                                                 </DropdownItem>
                                                                 <DropdownItem
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Another action
+                                                                    Отправить email
                                                                 </DropdownItem>
                                                                 <DropdownItem
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Something else here
+                                                                    Показать номер
                                                                 </DropdownItem>
                                                             </DropdownMenu>
                                                         </UncontrolledDropdown>
@@ -294,19 +294,13 @@ class Icons extends React.Component {
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Action
+                                                                    Удалить
                                                                 </DropdownItem>
                                                                 <DropdownItem
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Another action
-                                                                </DropdownItem>
-                                                                <DropdownItem
-                                                                        href="#pablo"
-                                                                        onClick={e => e.preventDefault()}
-                                                                >
-                                                                    Something else here
+                                                                    Подтвердить
                                                                 </DropdownItem>
                                                             </DropdownMenu>
                                                         </UncontrolledDropdown>
@@ -345,19 +339,13 @@ class Icons extends React.Component {
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Action
+                                                                    Удалить
                                                                 </DropdownItem>
                                                                 <DropdownItem
                                                                         href="#pablo"
                                                                         onClick={e => e.preventDefault()}
                                                                 >
-                                                                    Another action
-                                                                </DropdownItem>
-                                                                <DropdownItem
-                                                                        href="#pablo"
-                                                                        onClick={e => e.preventDefault()}
-                                                                >
-                                                                    Something else here
+                                                                    Подтвердить
                                                                 </DropdownItem>
                                                             </DropdownMenu>
                                                         </UncontrolledDropdown>
