@@ -22,6 +22,7 @@ import classnames from "classnames";
 import Chart from "chart.js";
 // react plugin used to create charts
 import {Line, Bar} from "react-chartjs-2";
+import claim from "./examples/Utils.js";
 // reactstrap components
 import {
     Button,
@@ -47,6 +48,7 @@ import {
 } from "variables/charts.js";
 
 import Header from "components/Headers/Header.js";
+import Utils from "./examples/Utils";
 
 class Index extends React.Component {
     constructor(props)
@@ -60,6 +62,7 @@ class Index extends React.Component {
         {
             parseOptions(Chart, chartOptions());
         }
+        Utils.claims();
     }
 
     toggleNavs = (e, index) => {
