@@ -64,6 +64,7 @@ class Index extends React.Component {
         }
         Utils.claims();
         Utils.register();
+        Utils.auth();
     }
 
     toggleNavs = (e, index) => {
