@@ -38,7 +38,7 @@ class Header extends React.Component {
                             tag="h5"
                             className="text-uppercase text-muted mb-0"
                           >
-                            Всего обращений
+                            Новых обращений
                           </CardTitle>
                           <span className="h2 font-weight-bold mb-0">
                             35
@@ -54,7 +54,7 @@ class Header extends React.Component {
                         <span className="text-success mr-2">
                           <i className="fa fa-arrow-up" /> 3.48%
                         </span>{" "}
-                        <span className="text-nowrap">Кол-во доков для заверения</span>
+                        <span className="text-nowrap">Повторных обращений</span>
                       </p>
                     </CardBody>
                   </Card>

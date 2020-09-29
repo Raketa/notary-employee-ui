@@ -21,323 +21,535 @@ import classnames from "classnames";
 // javascipt plugin for creating charts
 import Chart from "chart.js";
 // react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
+import {Line, Bar} from "react-chartjs-2";
 // reactstrap components
 import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  NavItem,
-  NavLink,
-  Nav,
-  Progress,
-  Table,
-  Container,
-  Row,
-  Col, CardImg, CardTitle, CardText
+    Button,
+    Card,
+    CardHeader,
+    CardBody,
+    NavItem,
+    NavLink,
+    Nav,
+    Progress,
+    Table,
+    Container,
+    Row,
+    Col, CardImg, CardTitle, CardText, Media, Badge, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardFooter, Pagination, PaginationItem, PaginationLink
 } from "reactstrap";
 
 // core components
 import {
-  chartOptions,
-  parseOptions,
-  chartExample1,
-  chartExample2
+    chartOptions,
+    parseOptions,
+    chartExample1,
+    chartExample2
 } from "variables/charts.js";
 
 import Header from "components/Headers/Header.js";
 
 class Index extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      activeNav: 1,
-      chartExample1Data: "data1"
-    };
-    if (window.Chart) {
-      parseOptions(Chart, chartOptions());
+    constructor(props)
+    {
+        super(props);
+        this.state = {
+            activeNav: 1,
+            chartExample1Data: "data1"
+        };
+        if (window.Chart)
+        {
+            parseOptions(Chart, chartOptions());
+        }
     }
-  }
-  toggleNavs = (e, index) => {
-    e.preventDefault();
-    this.setState({
-      activeNav: index,
-      chartExample1Data:
-        this.state.chartExample1Data === "data1" ? "data2" : "data1"
-    });
-  };
-  render() {
-    return (
-      <>
-        <Header />
-        {/* Page content */}
-        <Container className="mt--7" fluid>
-          <Row>
-            <Col className="mb-5 mb-xl-0" xl="8">
-              {/*<Card style={{ width: "18rem" }}>*/}
-              {/*  <CardImg*/}
-              {/*          alt="..."*/}
-              {/*          src={require("assets/img/theme/profile-cover.jpg")}*/}
-              {/*          top*/}
-              {/*  />*/}
-              {/*  <CardBody>*/}
-              {/*    <CardText>*/}
-              {/*      Текст какого то сообщения в чате от клиента к которому он приложил картинку*/}
-              {/*    </CardText>*/}
-              {/*    <Button*/}
-              {/*            color="primary"*/}
-              {/*            href="#pablo"*/}
-              {/*            onClick={e => e.preventDefault()}*/}
-              {/*    >*/}
-              {/*      Go somewhere*/}
-              {/*    </Button>*/}
-              {/*  </CardBody>*/}
-              {/*</Card>*/}
 
+    toggleNavs = (e, index) => {
+        e.preventDefault();
+        this.setState({
+            activeNav: index,
+            chartExample1Data:
+                    this.state.chartExample1Data === "data1" ? "data2" : "data1"
+        });
+    };
 
-              <div style={{width: "45%"}}>
-                <Card className="card-stats mb-4 mb-lg-0">
-                  <CardBody>
-                    <Row>
-                      <Col className="col-auto">
-                        <span className="avatar avatar-sm rounded-circle">
-                          <img
-                                  alt="..."
-                                  src={require("assets/img/theme/team-4-800x800.jpg")}
-                          />
-                      </span>
-                      </Col>
-                      <div className="col">
-                        <CardTitle className="text-uppercase text-muted mb-0">
-                          Иванов Иван Иванович
-                        </CardTitle>
-                        <span className="h2 font-weight-bold mb-0">Основной текст сообщения</span>
-                      </div>
-                    </Row>
-                    <p className="mt-3 mb-0 text-muted text-sm">
-                      <span className="text-nowrap">Было изменено тогда то</span>
-                    </p>
-                  </CardBody>
-                </Card>
-              </div>
-            </Col>
-            <Col xl="4">
-              <Card className="shadow">
-                <CardHeader className="bg-transparent">
-                  <Row className="align-items-center">
-                    <div className="col">
-                      <h6 className="text-uppercase text-muted ls-1 mb-1">
-                        Performance
-                      </h6>
-                      <h2 className="mb-0">Total orders</h2>
-                    </div>
-                  </Row>
-                </CardHeader>
-                <CardBody>
-                  {/* Chart */}
-                  <div className="chart">
-                    <Bar
-                      data={chartExample2.data}
-                      options={chartExample2.options}
-                    />
-                  </div>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col className="mb-5 mb-xl-0" xl="8">
-              {/*<Card className="shadow">*/}
-              {/*  <CardHeader className="border-0">*/}
-              {/*    <Row className="align-items-center">*/}
-              {/*      <div className="col">*/}
-              {/*        <h3 className="mb-0">Page visits</h3>*/}
-              {/*      </div>*/}
-              {/*      <div className="col text-right">*/}
-              {/*        <Button*/}
-              {/*          color="primary"*/}
-              {/*          href="#pablo"*/}
-              {/*          onClick={e => e.preventDefault()}*/}
-              {/*          size="sm"*/}
-              {/*        >*/}
-              {/*          See all*/}
-              {/*        </Button>*/}
-              {/*      </div>*/}
-              {/*    </Row>*/}
-              {/*  </CardHeader>*/}
-              {/*  <Table className="align-items-center table-flush" responsive>*/}
-              {/*    <thead className="thead-light">*/}
-              {/*      <tr>*/}
-              {/*        <th scope="col">Page name</th>*/}
-              {/*        <th scope="col">Visitors</th>*/}
-              {/*        <th scope="col">Unique users</th>*/}
-              {/*        <th scope="col">Bounce rate</th>*/}
-              {/*      </tr>*/}
-              {/*    </thead>*/}
-              {/*    <tbody>*/}
-              {/*      <tr>*/}
-              {/*        <th scope="row">/argon/</th>*/}
-              {/*        <td>4,569</td>*/}
-              {/*        <td>340</td>*/}
-              {/*        <td>*/}
-              {/*          <i className="fas fa-arrow-up text-success mr-3" />{" "}*/}
-              {/*          46,53%*/}
-              {/*        </td>*/}
-              {/*      </tr>*/}
-              {/*      <tr>*/}
-              {/*        <th scope="row">/argon/index.html</th>*/}
-              {/*        <td>3,985</td>*/}
-              {/*        <td>319</td>*/}
-              {/*        <td>*/}
-              {/*          <i className="fas fa-arrow-down text-warning mr-3" />{" "}*/}
-              {/*          46,53%*/}
-              {/*        </td>*/}
-              {/*      </tr>*/}
-              {/*      <tr>*/}
-              {/*        <th scope="row">/argon/charts.html</th>*/}
-              {/*        <td>3,513</td>*/}
-              {/*        <td>294</td>*/}
-              {/*        <td>*/}
-              {/*          <i className="fas fa-arrow-down text-warning mr-3" />{" "}*/}
-              {/*          36,49%*/}
-              {/*        </td>*/}
-              {/*      </tr>*/}
-              {/*      <tr>*/}
-              {/*        <th scope="row">/argon/tables.html</th>*/}
-              {/*        <td>2,050</td>*/}
-              {/*        <td>147</td>*/}
-              {/*        <td>*/}
-              {/*          <i className="fas fa-arrow-up text-success mr-3" />{" "}*/}
-              {/*          50,87%*/}
-              {/*        </td>*/}
-              {/*      </tr>*/}
-              {/*      <tr>*/}
-              {/*        <th scope="row">/argon/profile.html</th>*/}
-              {/*        <td>1,795</td>*/}
-              {/*        <td>190</td>*/}
-              {/*        <td>*/}
-              {/*          <i className="fas fa-arrow-down text-danger mr-3" />{" "}*/}
-              {/*          46,53%*/}
-              {/*        </td>*/}
-              {/*      </tr>*/}
-              {/*    </tbody>*/}
-              {/*  </Table>*/}
-              {/*</Card>*/}
-            </Col>
-            <Col xl="4">
-              <Card className="shadow">
-                <CardHeader className="border-0">
-                  <Row className="align-items-center">
-                    <div className="col">
-                      <h3 className="mb-0">Social traffic</h3>
-                    </div>
-                    <div className="col text-right">
-                      <Button
-                        color="primary"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                        size="sm"
-                      >
-                        See all
-                      </Button>
-                    </div>
-                  </Row>
-                </CardHeader>
-                <Table className="align-items-center table-flush" responsive>
-                  <thead className="thead-light">
-                    <tr>
-                      <th scope="col">Referral</th>
-                      <th scope="col">Visitors</th>
-                      <th scope="col" />
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">Facebook</th>
-                      <td>1,480</td>
-                      <td>
-                        <div className="d-flex align-items-center">
-                          <span className="mr-2">60%</span>
-                          <div>
-                            <Progress
-                              max="100"
-                              value="60"
-                              barClassName="bg-gradient-danger"
-                            />
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Facebook</th>
-                      <td>5,480</td>
-                      <td>
-                        <div className="d-flex align-items-center">
-                          <span className="mr-2">70%</span>
-                          <div>
-                            <Progress
-                              max="100"
-                              value="70"
-                              barClassName="bg-gradient-success"
-                            />
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Google</th>
-                      <td>4,807</td>
-                      <td>
-                        <div className="d-flex align-items-center">
-                          <span className="mr-2">80%</span>
-                          <div>
-                            <Progress max="100" value="80" />
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Instagram</th>
-                      <td>3,678</td>
-                      <td>
-                        <div className="d-flex align-items-center">
-                          <span className="mr-2">75%</span>
-                          <div>
-                            <Progress
-                              max="100"
-                              value="75"
-                              barClassName="bg-gradient-info"
-                            />
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">twitter</th>
-                      <td>2,645</td>
-                      <td>
-                        <div className="d-flex align-items-center">
-                          <span className="mr-2">30%</span>
-                          <div>
-                            <Progress
-                              max="100"
-                              value="30"
-                              barClassName="bg-gradient-warning"
-                            />
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </Table>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </>
-    );
-  }
+    render()
+    {
+        return (
+                <>
+                    <Header/>
+                    {/* Page content */}
+                    <Container className="mt--7" fluid>
+                        <Row>
+                            <Col className="mb-5 mb-xl-0" xl="8">
+                                <Row>
+                                    <div className="col">
+                                        <Card className="shadow">
+                                            <CardHeader className="border-0">
+                                                <Row className="align-items-center">
+                                                    <div className="col">
+                                                        <h3 className="mb-0">Последние обращения</h3>
+                                                    </div>
+                                                    <div className="col text-right">
+                                                        <Button
+                                                                color="primary"
+                                                                href="#pablo"
+                                                                onClick={e => e.preventDefault()}
+                                                                size="sm"
+                                                        >
+                                                            Развернуть
+                                                        </Button>
+                                                    </div>
+                                                </Row>
+                                            </CardHeader>
+                                            <Table className="align-items-center table-flush" responsive>
+                                                <thead className="thead-light">
+                                                <tr>
+                                                    <th scope="col">Тема</th>
+                                                    <th scope="col">ФИО клиента</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col"/>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <Media>
+                            <span className="mb-0 text-sm">
+                              Банковский перевод
+                            </span>
+                                                        </Media>
+                                                    </th>
+                                                    <td>Негодяев Злыдень Иванович</td>
+                                                    <td>
+                                                        <Badge color="" className="badge-dot mr-4">
+                                                            <i className="bg-warning"/>
+                                                            Не обработано
+                                                        </Badge>
+                                                    </td>
+                                                    <td className="text-right">
+                                                        <UncontrolledDropdown>
+                                                            <DropdownToggle
+                                                                    className="btn-icon-only text-light"
+                                                                    href="#pablo"
+                                                                    role="button"
+                                                                    size="sm"
+                                                                    color=""
+                                                                    onClick={e => e.preventDefault()}
+                                                            >
+                                                                <i className="fas fa-ellipsis-v"/>
+                                                            </DropdownToggle>
+                                                            <DropdownMenu className="dropdown-menu-arrow" right>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Another action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Something else here
+                                                                </DropdownItem>
+                                                            </DropdownMenu>
+                                                        </UncontrolledDropdown>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <Media>
+                            <span className="mb-0 text-sm">
+                              Доверенность на квартиру
+                            </span>
+                                                        </Media>
+                                                    </th>
+                                                    <td>Негодяев Злыдень Иванович</td>
+                                                    <td>
+                                                        <Badge color="" className="badge-dot mr-4">
+                                                            <i className="bg-warning"/>
+                                                            Не обработано
+                                                        </Badge>
+                                                    </td>
+                                                    <td className="text-right">
+                                                        <UncontrolledDropdown>
+                                                            <DropdownToggle
+                                                                    className="btn-icon-only text-light"
+                                                                    href="#pablo"
+                                                                    role="button"
+                                                                    size="sm"
+                                                                    color=""
+                                                                    onClick={e => e.preventDefault()}
+                                                            >
+                                                                <i className="fas fa-ellipsis-v"/>
+                                                            </DropdownToggle>
+                                                            <DropdownMenu className="dropdown-menu-arrow" right>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Another action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Something else here
+                                                                </DropdownItem>
+                                                            </DropdownMenu>
+                                                        </UncontrolledDropdown>
+                                                    </td>
+                                                </tr>
+
+                                                </tbody>
+                                            </Table>
+                                        </Card>
+                                    </div>
+                                </Row>
+                            </Col>
+                            <Col xl="4">
+                                <Card className="shadow">
+                                    <CardHeader className="border-0">
+                                        <Row className="align-items-center">
+                                            <div className="col">
+                                                <h3 className="mb-0">Обращения от сотрудников Банка</h3>
+                                            </div>
+                                            <div className="col text-right">
+                                                <Button
+                                                        color="primary"
+                                                        href="#pablo"
+                                                        onClick={e => e.preventDefault()}
+                                                        size="sm"
+                                                >
+                                                    Развернуть
+                                                </Button>
+                                            </div>
+                                        </Row>
+                                    </CardHeader>
+                                    <Table className="align-items-center table-flush" responsive>
+                                        <thead className="thead-light">
+                                        <tr>
+                                            <th scope="col">Тема</th>
+                                            <th scope="col">ФИО клиента</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col"/>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <Media>
+                            <span className="mb-0 text-sm">
+                              Банковский перевод
+                            </span>
+                                                </Media>
+                                            </th>
+                                            <td>Негодяев Злыдень Иванович</td>
+                                            <td>
+                                                <Badge color="" className="badge-dot mr-4">
+                                                    <i className="bg-warning"/>
+                                                    Не обработано
+                                                </Badge>
+                                            </td>
+                                            <td className="text-right">
+                                                <UncontrolledDropdown>
+                                                    <DropdownToggle
+                                                            className="btn-icon-only text-light"
+                                                            href="#pablo"
+                                                            role="button"
+                                                            size="sm"
+                                                            color=""
+                                                            onClick={e => e.preventDefault()}
+                                                    >
+                                                        <i className="fas fa-ellipsis-v"/>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu className="dropdown-menu-arrow" right>
+                                                        <DropdownItem
+                                                                href="#pablo"
+                                                                onClick={e => e.preventDefault()}
+                                                        >
+                                                            Action
+                                                        </DropdownItem>
+                                                        <DropdownItem
+                                                                href="#pablo"
+                                                                onClick={e => e.preventDefault()}
+                                                        >
+                                                            Another action
+                                                        </DropdownItem>
+                                                        <DropdownItem
+                                                                href="#pablo"
+                                                                onClick={e => e.preventDefault()}
+                                                        >
+                                                            Something else here
+                                                        </DropdownItem>
+                                                    </DropdownMenu>
+                                                </UncontrolledDropdown>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <Media>
+                            <span className="mb-0 text-sm">
+                              Доверенность на квартиру
+                            </span>
+                                                </Media>
+                                            </th>
+                                            <td>Негодяев Злыдень Иванович</td>
+                                            <td>
+                                                <Badge color="" className="badge-dot mr-4">
+                                                    <i className="bg-warning"/>
+                                                    Не обработано
+                                                </Badge>
+                                            </td>
+                                            <td className="text-right">
+                                                <UncontrolledDropdown>
+                                                    <DropdownToggle
+                                                            className="btn-icon-only text-light"
+                                                            href="#pablo"
+                                                            role="button"
+                                                            size="sm"
+                                                            color=""
+                                                            onClick={e => e.preventDefault()}
+                                                    >
+                                                        <i className="fas fa-ellipsis-v"/>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu className="dropdown-menu-arrow" right>
+                                                        <DropdownItem
+                                                                href="#pablo"
+                                                                onClick={e => e.preventDefault()}
+                                                        >
+                                                            Action
+                                                        </DropdownItem>
+                                                        <DropdownItem
+                                                                href="#pablo"
+                                                                onClick={e => e.preventDefault()}
+                                                        >
+                                                            Another action
+                                                        </DropdownItem>
+                                                        <DropdownItem
+                                                                href="#pablo"
+                                                                onClick={e => e.preventDefault()}
+                                                        >
+                                                            Something else here
+                                                        </DropdownItem>
+                                                    </DropdownMenu>
+                                                </UncontrolledDropdown>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </Table>
+                                </Card>
+                            </Col>
+
+                        </Row>
+                        <Row className="mt-5">
+                            <Col className="mb-5 mb-xl-0" xl="8">
+                                <Row>
+                                    <div className="col">
+                                        <Card className="shadow">
+                                            <CardHeader className="border-0">
+                                                <Row className="align-items-center">
+                                                    <div className="col">
+                                                        <h3 className="mb-0">Ждут вашего ответа</h3>
+                                                    </div>
+                                                    <div className="col text-right">
+                                                        <Button
+                                                                color="primary"
+                                                                href="#pablo"
+                                                                onClick={e => e.preventDefault()}
+                                                                size="sm"
+                                                        >
+                                                            Развернуть
+                                                        </Button>
+                                                    </div>
+                                                </Row>
+                                            </CardHeader>
+                                            <Table className="align-items-center table-flush" responsive>
+                                                <thead className="thead-light">
+                                                <tr>
+                                                    <th scope="col">Тема</th>
+                                                    <th scope="col">ФИО клиента</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col"/>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <Media>
+                            <span className="mb-0 text-sm">
+                              Банковский перевод
+                            </span>
+                                                        </Media>
+                                                    </th>
+                                                    <td>Петренко Петр Петрович</td>
+                                                    <td>
+                                                        <Badge color="" className="badge-dot mr-4">
+                                                            <i className="bg-gradient-yellow"/>
+                                                            В процессе
+                                                        </Badge>
+                                                    </td>
+                                                    <td className="text-right">
+                                                        <UncontrolledDropdown>
+                                                            <DropdownToggle
+                                                                    className="btn-icon-only text-light"
+                                                                    href="#pablo"
+                                                                    role="button"
+                                                                    size="sm"
+                                                                    color=""
+                                                                    onClick={e => e.preventDefault()}
+                                                            >
+                                                                <i className="fas fa-ellipsis-v"/>
+                                                            </DropdownToggle>
+                                                            <DropdownMenu className="dropdown-menu-arrow" right>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Another action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Something else here
+                                                                </DropdownItem>
+                                                            </DropdownMenu>
+                                                        </UncontrolledDropdown>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <Media>
+                            <span className="mb-0 text-sm">
+                              Банковский перевод
+                            </span>
+                                                        </Media>
+                                                    </th>
+                                                    <td>
+                                                        Петренко Петр Петрович
+                                                    </td>
+                                                    <td>
+                                                        <Badge color="" className="badge-dot mr-4">
+                                                            <i className="bg-gradient-yellow"/>
+                                                            В процессе
+                                                        </Badge>
+                                                    </td>
+                                                    <td className="text-right">
+                                                        <UncontrolledDropdown>
+                                                            <DropdownToggle
+                                                                    className="btn-icon-only text-light"
+                                                                    href="#pablo"
+                                                                    role="button"
+                                                                    size="sm"
+                                                                    color=""
+                                                                    onClick={e => e.preventDefault()}
+                                                            >
+                                                                <i className="fas fa-ellipsis-v"/>
+                                                            </DropdownToggle>
+                                                            <DropdownMenu className="dropdown-menu-arrow" right>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Another action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Something else here
+                                                                </DropdownItem>
+                                                            </DropdownMenu>
+                                                        </UncontrolledDropdown>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <Media>
+                            <span className="mb-0 text-sm">
+                              Банковский перевод
+                            </span>
+                                                        </Media>
+                                                    </th>
+                                                    <td>
+                                                        Негодяев Злыдень Иванович
+                                                    </td>
+                                                    <td>
+                                                        <Badge color="" className="badge-dot mr-4">
+                                                            <i className="bg-danger"/>
+                                                            Не законное действие
+                                                        </Badge>
+                                                    </td>
+                                                    <td className="text-right">
+                                                        <UncontrolledDropdown>
+                                                            <DropdownToggle
+                                                                    className="btn-icon-only text-light"
+                                                                    href="#pablo"
+                                                                    role="button"
+                                                                    size="sm"
+                                                                    color=""
+                                                                    onClick={e => e.preventDefault()}
+                                                            >
+                                                                <i className="fas fa-ellipsis-v"/>
+                                                            </DropdownToggle>
+                                                            <DropdownMenu className="dropdown-menu-arrow" right>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Another action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Something else here
+                                                                </DropdownItem>
+                                                            </DropdownMenu>
+                                                        </UncontrolledDropdown>
+                                                    </td>
+                                                </tr>
+
+                                                </tbody>
+                                            </Table>
+                                        </Card>
+                                    </div>
+                                </Row>
+                            </Col>
+                        </Row>
+                    </Container>
+                </>
+        );
+    }
 }
 
 export default Index;
