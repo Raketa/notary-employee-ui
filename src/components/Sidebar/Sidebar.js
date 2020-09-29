@@ -128,11 +128,9 @@ class Sidebar extends React.Component {
           {/* Brand */}
           {logo ? (
             <NavbarBrand className="pt-0" {...navbarBrandProps}>
-              <img
-                alt={logo.imgAlt}
-                className="navbar-brand-img"
-                src={logo.imgSrc}
-              />
+              <div className="laning-sberbank-notary-maintext">
+                СБЕРБАНК  <br/>  НОТАРИУС
+              </div>
             </NavbarBrand>
           ) : null}
           {/* User */}

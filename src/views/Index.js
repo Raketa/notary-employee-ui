@@ -35,7 +35,7 @@ import {
   Table,
   Container,
   Row,
-  Col
+  Col, CardImg, CardTitle, CardText
 } from "reactstrap";
 
 // core components
@@ -75,57 +75,52 @@ class Index extends React.Component {
         <Container className="mt--7" fluid>
           <Row>
             <Col className="mb-5 mb-xl-0" xl="8">
-              {/*<Card className="bg-gradient-default shadow">*/}
-              {/*  <CardHeader className="bg-transparent">*/}
-              {/*    <Row className="align-items-center">*/}
-              {/*      <div className="col">*/}
-              {/*        <h6 className="text-uppercase text-light ls-1 mb-1">*/}
-              {/*          Overview*/}
-              {/*        </h6>*/}
-              {/*        <h2 className="text-white mb-0">Sales value</h2>*/}
-              {/*      </div>*/}
-              {/*      <div className="col">*/}
-              {/*        <Nav className="justify-content-end" pills>*/}
-              {/*          <NavItem>*/}
-              {/*            <NavLink*/}
-              {/*              className={classnames("py-2 px-3", {*/}
-              {/*                active: this.state.activeNav === 1*/}
-              {/*              })}*/}
-              {/*              href="#pablo"*/}
-              {/*              onClick={e => this.toggleNavs(e, 1)}*/}
-              {/*            >*/}
-              {/*              <span className="d-none d-md-block">Month</span>*/}
-              {/*              <span className="d-md-none">M</span>*/}
-              {/*            </NavLink>*/}
-              {/*          </NavItem>*/}
-              {/*          <NavItem>*/}
-              {/*            <NavLink*/}
-              {/*              className={classnames("py-2 px-3", {*/}
-              {/*                active: this.state.activeNav === 2*/}
-              {/*              })}*/}
-              {/*              data-toggle="tab"*/}
-              {/*              href="#pablo"*/}
-              {/*              onClick={e => this.toggleNavs(e, 2)}*/}
-              {/*            >*/}
-              {/*              <span className="d-none d-md-block">Week</span>*/}
-              {/*              <span className="d-md-none">W</span>*/}
-              {/*            </NavLink>*/}
-              {/*          </NavItem>*/}
-              {/*        </Nav>*/}
-              {/*      </div>*/}
-              {/*    </Row>*/}
-              {/*  </CardHeader>*/}
+              {/*<Card style={{ width: "18rem" }}>*/}
+              {/*  <CardImg*/}
+              {/*          alt="..."*/}
+              {/*          src={require("assets/img/theme/profile-cover.jpg")}*/}
+              {/*          top*/}
+              {/*  />*/}
               {/*  <CardBody>*/}
-              {/*    /!* Chart *!/*/}
-              {/*    <div className="chart">*/}
-              {/*      <Line*/}
-              {/*        data={chartExample1[this.state.chartExample1Data]}*/}
-              {/*        options={chartExample1.options}*/}
-              {/*        getDatasetAtEvent={e => console.log(e)}*/}
-              {/*      />*/}
-              {/*    </div>*/}
+              {/*    <CardText>*/}
+              {/*      Текст какого то сообщения в чате от клиента к которому он приложил картинку*/}
+              {/*    </CardText>*/}
+              {/*    <Button*/}
+              {/*            color="primary"*/}
+              {/*            href="#pablo"*/}
+              {/*            onClick={e => e.preventDefault()}*/}
+              {/*    >*/}
+              {/*      Go somewhere*/}
+              {/*    </Button>*/}
               {/*  </CardBody>*/}
               {/*</Card>*/}
+
+
+              <div style={{width: "45%"}}>
+                <Card className="card-stats mb-4 mb-lg-0">
+                  <CardBody>
+                    <Row>
+                      <Col className="col-auto">
+                        <span className="avatar avatar-sm rounded-circle">
+                          <img
+                                  alt="..."
+                                  src={require("assets/img/theme/team-4-800x800.jpg")}
+                          />
+                      </span>
+                      </Col>
+                      <div className="col">
+                        <CardTitle className="text-uppercase text-muted mb-0">
+                          Иванов Иван Иванович
+                        </CardTitle>
+                        <span className="h2 font-weight-bold mb-0">Основной текст сообщения</span>
+                      </div>
+                    </Row>
+                    <p className="mt-3 mb-0 text-muted text-sm">
+                      <span className="text-nowrap">Было изменено тогда то</span>
+                    </p>
+                  </CardBody>
+                </Card>
+              </div>
             </Col>
             <Col xl="4">
               <Card className="shadow">
