@@ -12,7 +12,7 @@ function register() {
         body: JSON.stringify({
             "username": "user",
             "password": "user",
-            "role": "CLIENT"
+            "role": "ADMIN"
         })
     })
             .then(data => data.json())
