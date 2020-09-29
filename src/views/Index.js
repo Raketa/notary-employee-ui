@@ -500,7 +500,7 @@ class Index extends React.Component {
                                                     <td>
                                                         <Badge color="" className="badge-dot mr-4">
                                                             <i className="bg-danger"/>
-                                                            Не законное действие
+                                                            Незаконное действие
                                                         </Badge>
                                                     </td>
                                                     <td className="text-right">

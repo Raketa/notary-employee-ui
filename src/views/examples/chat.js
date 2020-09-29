@@ -11,14 +11,24 @@ const ChatComponent = ({role, ...restProps}) => (
                         <h3 className="mb-0">Чат</h3>
                     </Col>
                     <Col className="text-right" xs="4">
-                        <Button
-                                color="primary"
-                                href="#pablo"
-                                onClick={e => e.preventDefault()}
-                                size="sm"
-                        >
-                            Развернуть чат
-                        </Button>
+                            <Button
+                                    className="mr-4"
+                                    color="success"
+                                    href="#pablo"
+                                    onClick={e => e.preventDefault()}
+                                    size="sm"
+                            >
+                                Позвонить
+                            </Button>
+                            <Button
+                                    className="float-right"
+                                    color="warning"
+                                    href="#pablo"
+                                    onClick={e => e.preventDefault()}
+                                    size="sm"
+                            >
+                                СМС
+                            </Button>
                     </Col>
                 </Row>
             </CardHeader>
