@@ -26,7 +26,7 @@ import {
     Container,
     Row,
     Col,
-    UncontrolledTooltip, Button, Form, FormGroup, Input
+    UncontrolledTooltip, Button, Form, FormGroup, Input, Table, Media, Badge, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem
 } from "reactstrap";
 // core components
 import Header from "components/Headers/Header.js";
@@ -53,19 +53,6 @@ class Icons extends React.Component {
                             <Col className="order-xl-2 mb-5 mb-xl-0" xl="4">
                                 {/*Правая часть чата*/}
                                 <Card className="card-profile shadow">
-                                    {/*<Row className="justify-content-center">*/}
-                                    {/*    <Col className="order-lg-2" lg="3">*/}
-                                    {/*        <div className="card-profile-image">*/}
-                                    {/*            <a href="#pablo" onClick={e => e.preventDefault()}>*/}
-                                    {/*                <img*/}
-                                    {/*                        alt="..."*/}
-                                    {/*                        className="rounded-circle"*/}
-                                    {/*                        src={require("assets/img/theme/team-4-800x800.jpg")}*/}
-                                    {/*                />*/}
-                                    {/*            </a>*/}
-                                    {/*        </div>*/}
-                                    {/*    </Col>*/}
-                                    {/*</Row>*/}
                                     <CardHeader className="text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                                         <div className="d-flex justify-content-between">
                                             <Button
@@ -84,60 +71,302 @@ class Icons extends React.Component {
                                                     onClick={e => e.preventDefault()}
                                                     size="sm"
                                             >
-                                                Изменить
+                                                Скрыть
                                             </Button>
 
                                         </div>
+                                        <hr className="my-2"/>
+
                                         <Row>
-                                            Пользователи
+                                            <Table
+                                                    className="align-items-center table-flush"
+                                                    responsive
+                                            >
+                                                <thead className="thead-light">
+                                                <tr>
+                                                    <th scope="col">имя</th>
+                                                    <th scope="col">статус</th>
+                                                    <th scope="col">действия</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <Media className="align-items-center">
+                                                            <Media>
+                            <span className="mb-0 text-sm">
+                              Иванов Иван Иванович
+                            </span>
+                                                            </Media>
+                                                        </Media>
+                                                    </th>
+                                                    <td>
+                                                        <Badge color="" className="badge-dot mr-4">
+                                                            <i className="bg-success" />
+                                                        </Badge>
+                                                    </td>
+
+                                                    <td className="text-right">
+                                                        <UncontrolledDropdown>
+                                                            <DropdownToggle
+                                                                    className="btn-icon-only text-light"
+                                                                    href="#pablo"
+                                                                    role="button"
+                                                                    size="sm"
+                                                                    color=""
+                                                                    onClick={e => e.preventDefault()}
+                                                            >
+                                                                <i className="fas fa-ellipsis-v" />
+                                                            </DropdownToggle>
+                                                            <DropdownMenu className="dropdown-menu-arrow" right>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Another action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Something else here
+                                                                </DropdownItem>
+                                                            </DropdownMenu>
+                                                        </UncontrolledDropdown>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <Media className="align-items-center">
+                                                            <Media>
+                            <span className="mb-0 text-sm">
+                              Негодяев Злыдень Иванович
+                            </span>
+                                                            </Media>
+                                                        </Media>
+                                                    </th>
+                                                    <td>
+                                                        <Badge color="" className="badge-dot mr-4">
+                                                            <i className="bg-warning" />
+                                                        </Badge>
+                                                    </td>
+
+                                                    <td className="text-right">
+                                                        <UncontrolledDropdown>
+                                                            <DropdownToggle
+                                                                    className="btn-icon-only text-light"
+                                                                    href="#pablo"
+                                                                    role="button"
+                                                                    size="sm"
+                                                                    color=""
+                                                                    onClick={e => e.preventDefault()}
+                                                            >
+                                                                <i className="fas fa-ellipsis-v" />
+                                                            </DropdownToggle>
+                                                            <DropdownMenu className="dropdown-menu-arrow" right>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Another action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Something else here
+                                                                </DropdownItem>
+                                                            </DropdownMenu>
+                                                        </UncontrolledDropdown>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <Media className="align-items-center">
+                                                            <Media>
+                            <span className="mb-0 text-sm">
+                              Петренко Петр Петрович
+                            </span>
+                                                            </Media>
+                                                        </Media>
+                                                    </th>
+                                                    <td>
+                                                        <Badge color="" className="badge-dot mr-4">
+                                                            <i className="bg-warning" />
+                                                        </Badge>
+                                                    </td>
+
+                                                    <td className="text-right">
+                                                        <UncontrolledDropdown>
+                                                            <DropdownToggle
+                                                                    className="btn-icon-only text-light"
+                                                                    href="#pablo"
+                                                                    role="button"
+                                                                    size="sm"
+                                                                    color=""
+                                                                    onClick={e => e.preventDefault()}
+                                                            >
+                                                                <i className="fas fa-ellipsis-v" />
+                                                            </DropdownToggle>
+                                                            <DropdownMenu className="dropdown-menu-arrow" right>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Another action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Something else here
+                                                                </DropdownItem>
+                                                            </DropdownMenu>
+                                                        </UncontrolledDropdown>
+                                                    </td>
+                                                </tr>
+
+                                                </tbody>
+                                            </Table>
                                         </Row>
                                     </CardHeader>
                                     <CardBody className="pt-0 pt-md-4">
                                         <Row>
-                                            <div className="col">
-                                                <div className="card-profile-stats d-flex justify-content-center mt-md-5">
-                                                    <div>
-                                                        <span className="heading">22</span>
-                                                        <span className="description">Friends</span>
-                                                    </div>
-                                                    <div>
-                                                        <span className="heading">10</span>
-                                                        <span className="description">Photos</span>
-                                                    </div>
-                                                    <div>
-                                                        <span className="heading">89</span>
-                                                        <span className="description">Comments</span>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <Table
+                                                    className="align-items-center table-flush"
+                                                    responsive
+                                            >
+                                                <thead className="thead-light">
+                                                <tr>
+                                                    <th scope="col">Документ</th>
+                                                    <th scope="col">статус</th>
+                                                    <th scope="col">действия</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <Media className="align-items-center">
+                                                            <Media>
+                            <span className="mb-0 text-sm">
+                              Паспорт
+                            </span>
+                                                            </Media>
+                                                        </Media>
+                                                    </th>
+                                                    <td>
+                                                        <Badge color="" className="badge-dot mr-4">
+                                                            <i className="bg-success" />
+                                                        </Badge>
+                                                    </td>
+
+                                                    <td className="text-right">
+                                                        <UncontrolledDropdown>
+                                                            <DropdownToggle
+                                                                    className="btn-icon-only text-light"
+                                                                    href="#pablo"
+                                                                    role="button"
+                                                                    size="sm"
+                                                                    color=""
+                                                                    onClick={e => e.preventDefault()}
+                                                            >
+                                                                <i className="fas fa-ellipsis-v" />
+                                                            </DropdownToggle>
+                                                            <DropdownMenu className="dropdown-menu-arrow" right>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Another action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Something else here
+                                                                </DropdownItem>
+                                                            </DropdownMenu>
+                                                        </UncontrolledDropdown>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <Media className="align-items-center">
+                                                            <Media>
+                            <span className="mb-0 text-sm">
+                              Доверенность на квартиру
+                            </span>
+                                                            </Media>
+                                                        </Media>
+                                                    </th>
+                                                    <td>
+                                                        <Badge color="" className="badge-dot mr-4">
+                                                            <i className="bg-warning" />
+                                                        </Badge>
+                                                    </td>
+
+                                                    <td className="text-right">
+                                                        <UncontrolledDropdown>
+                                                            <DropdownToggle
+                                                                    className="btn-icon-only text-light"
+                                                                    href="#pablo"
+                                                                    role="button"
+                                                                    size="sm"
+                                                                    color=""
+                                                                    onClick={e => e.preventDefault()}
+                                                            >
+                                                                <i className="fas fa-ellipsis-v" />
+                                                            </DropdownToggle>
+                                                            <DropdownMenu className="dropdown-menu-arrow" right>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Another action
+                                                                </DropdownItem>
+                                                                <DropdownItem
+                                                                        href="#pablo"
+                                                                        onClick={e => e.preventDefault()}
+                                                                >
+                                                                    Something else here
+                                                                </DropdownItem>
+                                                            </DropdownMenu>
+                                                        </UncontrolledDropdown>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </Table>
                                         </Row>
-                                        <div className="text-center">
-                                            <h3>
-                                                Jessica Jones
-                                                <span className="font-weight-light">, 27</span>
-                                            </h3>
-                                            <div className="h5 font-weight-300">
-                                                <i className="ni location_pin mr-2"/>
-                                                Bucharest, Romania
-                                            </div>
-                                            <div className="h5 mt-4">
-                                                <i className="ni business_briefcase-24 mr-2"/>
-                                                Solution Manager - Creative Tim Officer
-                                            </div>
-                                            <div>
-                                                <i className="ni education_hat mr-2"/>
-                                                University of Computer Science
-                                            </div>
-                                            <hr className="my-4"/>
-                                            <p>
-                                                Ryan — the name taken by Melbourne-raised, Brooklyn-based
-                                                Nick Murphy — writes, performs and records all of his own
-                                                music.
-                                            </p>
-                                            <a href="#pablo" onClick={e => e.preventDefault()}>
-                                                Show more
-                                            </a>
-                                        </div>
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -284,8 +513,7 @@ class Icons extends React.Component {
                                         <Button className="my-4" color="info" type="button">
                                             Отправить
                                         </Button>
-                                        <label htmlFor="file-input">Выберите файл</label>
-
+                                        <input type="file" name="photo" multiple accept="image/*,image/jpeg"/>
                                     </CardBody>
 
                                 </Card>

@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e8e7707e-946e-41e6-b704-c12eaf3e949f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/examples/Icons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/Icons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/examples/Tables.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/examples/Tables.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
       <workItem from="1599548847863" duration="1187000" />
       <workItem from="1599719314995" duration="343000" />
       <workItem from="1600058337441" duration="213000" />
-      <workItem from="1600058884487" duration="32416000" />
+      <workItem from="1600058884487" duration="35231000" />
     </task>
     <task id="LOCAL-00001" summary="удаление homepage">
       <created>1599375886047</created>
@@ -102,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600322653759</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Обновление верски добавление чата">
+      <created>1601378129730</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601378129731</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +129,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="удаление homepage" />
     <MESSAGE value="Карточки сверху, убрал линие, заготовка под чат" />
-    <option name="LAST_COMMIT_MESSAGE" value="Карточки сверху, убрал линие, заготовка под чат" />
+    <MESSAGE value="Обновление верски добавление чата" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновление верски добавление чата" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601367791965">
@@ -132,11 +138,12 @@
     </state>
     <state x="360" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1008@0.23.1792.1008" timestamp="1599034549824" />
     <state x="360" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1025@0.23.1792.1025" timestamp="1601367791965" />
-    <state x="403" y="133" key="CommitChangelistDialog2" timestamp="1600322653491">
-      <screen x="0" y="23" width="1792" height="1016" />
+    <state x="403" y="134" key="CommitChangelistDialog2" timestamp="1601378129521">
+      <screen x="0" y="23" width="1792" height="1025" />
     </state>
     <state x="403" y="132" key="CommitChangelistDialog2/0.23.1792.1011@0.23.1792.1011" timestamp="1599375885943" />
     <state x="403" y="133" key="CommitChangelistDialog2/0.23.1792.1016@0.23.1792.1016" timestamp="1600322653491" />
+    <state x="403" y="134" key="CommitChangelistDialog2/0.23.1792.1025@0.23.1792.1025" timestamp="1601378129521" />
     <state x="100" y="124" width="1592" height="813" key="DiffContextDialog" timestamp="1601356292086">
       <screen x="0" y="23" width="1792" height="1023" />
     </state>
@@ -254,31 +261,33 @@
     <state width="1750" height="337" key="GridCell.Tab.3.right/0.23.1792.1016@0.23.1792.1016" timestamp="1600241635100" />
     <state width="1750" height="343" key="GridCell.Tab.3.right/0.23.1792.1023@0.23.1792.1023" timestamp="1601361483873" />
     <state width="1750" height="342" key="GridCell.Tab.3.right/0.23.1792.1025@0.23.1792.1025" timestamp="1601364161479" />
-    <state x="571" y="244" key="RollbackChangesDialog" timestamp="1601356288702">
-      <screen x="0" y="23" width="1792" height="1023" />
+    <state x="571" y="244" key="RollbackChangesDialog" timestamp="1601382060051">
+      <screen x="0" y="23" width="1792" height="1025" />
     </state>
     <state x="571" y="244" key="RollbackChangesDialog/0.23.1792.1023@0.23.1792.1023" timestamp="1601356288702" />
+    <state x="571" y="244" key="RollbackChangesDialog/0.23.1792.1025@0.23.1792.1025" timestamp="1601382060051" />
     <state x="397" y="166" key="SettingsEditor" timestamp="1599372925672">
       <screen x="0" y="23" width="1792" height="1011" />
     </state>
     <state x="397" y="166" key="SettingsEditor/0.23.1792.1011@0.23.1792.1011" timestamp="1599372925672" />
-    <state x="496" y="269" key="Vcs.Push.Dialog.v2" timestamp="1600322755847">
-      <screen x="0" y="23" width="1792" height="1016" />
+    <state x="496" y="271" key="Vcs.Push.Dialog.v2" timestamp="1601378132108">
+      <screen x="0" y="23" width="1792" height="1025" />
     </state>
     <state x="496" y="268" key="Vcs.Push.Dialog.v2/0.23.1792.1011@0.23.1792.1011" timestamp="1599375888453" />
     <state x="496" y="269" key="Vcs.Push.Dialog.v2/0.23.1792.1016@0.23.1792.1016" timestamp="1600322755847" />
+    <state x="496" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1025@0.23.1792.1025" timestamp="1601378132108" />
     <state x="100" y="123" width="1592" height="809" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601359062988">
       <screen x="0" y="23" width="1792" height="1025" />
     </state>
     <state x="100" y="123" width="1592" height="807" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1792.1023@0.23.1792.1023" timestamp="1601356842759" />
     <state x="100" y="123" width="1592" height="809" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1792.1025@0.23.1792.1025" timestamp="1601359062988" />
-    <state x="551" y="294" width="689" height="481" key="find.popup" timestamp="1601371901208">
+    <state x="551" y="294" width="689" height="481" key="find.popup" timestamp="1601381752241">
       <screen x="0" y="23" width="1792" height="1025" />
     </state>
     <state x="551" y="290" width="689" height="472" key="find.popup/0.23.1792.1008@0.23.1792.1008" timestamp="1600319244916" />
     <state x="551" y="291" width="689" height="476" key="find.popup/0.23.1792.1014@0.23.1792.1014" timestamp="1600340670085" />
     <state x="551" y="292" width="689" height="476" key="find.popup/0.23.1792.1016@0.23.1792.1016" timestamp="1600499611013" />
-    <state x="551" y="294" width="689" height="481" key="find.popup/0.23.1792.1025@0.23.1792.1025" timestamp="1601371901208" />
+    <state x="551" y="294" width="689" height="481" key="find.popup/0.23.1792.1025@0.23.1792.1025" timestamp="1601381752241" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1600065671442">
       <screen x="0" y="23" width="1792" height="1008" />
     </state>

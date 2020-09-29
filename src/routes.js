@@ -33,7 +33,7 @@ var routes = [
   },
   {
     path: "/icons",
-    name: "Icons",
+    name: "Чаты",
     icon: "ni ni-planet text-blue",
     component: Icons,
     layout: "/admin"
