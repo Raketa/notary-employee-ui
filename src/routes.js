@@ -32,15 +32,15 @@ var routes = [
     layout: "/admin"
   },
   {
-    path: "/icons",
+    path: "/chats",
     name: "Чаты",
     icon: "ni ni-planet text-blue",
     component: Icons,
     layout: "/admin"
   },
   {
-    path: "/maps",
-    name: "Maps",
+    path: "/clients",
+    name: "Клиенты",
     icon: "ni ni-pin-3 text-orange",
     component: Maps,
     layout: "/admin"
@@ -54,11 +54,18 @@ var routes = [
   },
   {
     path: "/tables",
-    name: "Tables",
+    name: "Обращения",
     icon: "ni ni-bullet-list-67 text-red",
     component: Tables,
     layout: "/admin"
-  }//,
+  },
+  // {
+  //   path: "/tables",
+  //   name: "Обращения",
+  //   icon: "ni ni-bullet-list-67 text-red",
+  //   component: Tables,
+  //   layout: "/admin"
+  // },
   // {
   //   path: "/login",
   //   name: "Login",
