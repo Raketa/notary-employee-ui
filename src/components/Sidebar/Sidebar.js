@@ -129,7 +129,7 @@ class Sidebar extends React.Component {
           {logo ? (
             <NavbarBrand className="pt-0" {...navbarBrandProps}>
               <div className="laning-sberbank-notary-maintext">
-                СБЕР  <br/>  НОТАРИУС
+                СБЕРНОТАРИУС
               </div>
             </NavbarBrand>
           ) : null}
