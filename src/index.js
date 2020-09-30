@@ -26,6 +26,10 @@ import "assets/css/custom.css";
 
 import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
+import Utils from "./views/examples/Utils";
+
+Utils.auth();
+Utils.initChat("Стартовый чат");
 
 ReactDOM.render(
   <BrowserRouter>

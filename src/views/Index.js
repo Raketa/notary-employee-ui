@@ -62,9 +62,9 @@ class Index extends React.Component {
         {
             parseOptions(Chart, chartOptions());
         }
-        Utils.claims();
-        Utils.register();
-        Utils.auth();
+        //Utils.claims();
+        //Utils.register();
+        //Utils.auth();
     }
 
     toggleNavs = (e, index) => {
